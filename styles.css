@@ -260,7 +260,7 @@ nav a:hover, nav a[aria-current="page"] {
   display: flex;
   flex-wrap: wrap;
   gap: .4rem;
-  margin-bottom: .95rem;
+  margin-top: .95rem;
 }
 
 .tag {
@@ -272,9 +272,6 @@ nav a:hover, nav a[aria-current="page"] {
 
 .tag-airing { background: #34c75921; color: #216a36; }
 .tag-upcoming { background: #00667821; color: #006678; }
-.tag-concluded { background: #8e8e9321; color: #59595e; }
-.tag-cancelled { background: #ff3b3021; color: #a82a24; }
-.tag-cloud { background: #dceff7; color: #275365; }
 
 .section {
   padding: clamp(2.75rem, 6vw, 4.75rem) 0;
@@ -398,6 +395,4 @@ footer p { margin-top: .65rem; }
 
   .tag-airing { background: #30d15821; color: #30d158; }
   .tag-upcoming { background: #0de0ff21; color: #0de0ff; }
-  .tag-concluded { background: #aeaeb221; color: #aeaeb2; }
-  .tag-cancelled { background: #ff696121; color: #ff7670; }
 }
