@@ -138,21 +138,11 @@ nav a:hover, nav a[aria-current="page"] {
 .hero .button { margin-top: 1.75rem; }
 
 .preview-stage {
-  --curtain-glow: #ffc09152;
-  --curtain-shadow: #310d29ab;
   height: clamp(23rem, 44vw, 31rem);
   overflow: hidden;
   border: 1px solid #813448;
   border-radius: 1.65rem;
-  background:
-    radial-gradient(ellipse at 48% 4%, var(--curtain-glow), transparent 68%),
-    radial-gradient(ellipse at 50% 30%, transparent 28%, var(--curtain-shadow)),
-    repeating-linear-gradient(
-      90deg,
-      #401026 0%, #5c132d 1.5%, #962b40 4%, #ae4050 6%, #871e38 8%, #461027 11%,
-      #66152e 13%, #aa3347 16%, #a12b3d 18%, #61152e 21%, #361124 23%,
-      #4f1330 25%, #84213c 28%, #a0374b 30%, #771e37 33%, #401026 36%
-    );
+  background: #57141e url("curtain.webp") center top / cover no-repeat;
 }
 
 .preview-track {
@@ -394,8 +384,8 @@ footer p { margin-top: .65rem; }
   }
 
   .preview-stage {
-    --curtain-glow: #ff9d7838;
-    --curtain-shadow: #230b22ca;
     border-color: #632c42;
+    background-color: #3d101a;
+    background-image: linear-gradient(#210a1426, #210a1440), url("curtain.webp");
   }
 }
