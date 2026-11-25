@@ -138,25 +138,21 @@ nav a:hover, nav a[aria-current="page"] {
 .hero .button { margin-top: 1.75rem; }
 
 .preview-stage {
-  position: relative;
+  --curtain-glow: #ffc09152;
+  --curtain-shadow: #310d29ab;
   height: clamp(23rem, 44vw, 31rem);
   overflow: hidden;
-  isolation: isolate;
-  border: 1px solid #a3ccdd;
+  border: 1px solid #813448;
   border-radius: 1.65rem;
-  background: linear-gradient(145deg, #e1f3f8, #a0cfe5);
-}
-
-.preview-stage::before {
-  position: absolute;
-  z-index: -1;
-  inset: 18% auto auto -16%;
-  width: 102%;
-  aspect-ratio: 1;
-  border: 1px solid #f4fcff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2.7rem #effaff3b, 0 0 0 5.4rem #effaff2e;
-  content: "";
+  background:
+    radial-gradient(ellipse at 48% 4%, var(--curtain-glow), transparent 68%),
+    radial-gradient(ellipse at 50% 30%, transparent 28%, var(--curtain-shadow)),
+    repeating-linear-gradient(
+      90deg,
+      #401026 0%, #5c132d 1.5%, #962b40 4%, #ae4050 6%, #871e38 8%, #461027 11%,
+      #66152e 13%, #aa3347 16%, #a12b3d 18%, #61152e 21%, #361124 23%,
+      #4f1330 25%, #84213c 28%, #a0374b 30%, #771e37 33%, #401026 36%
+    );
 }
 
 .preview-track {
@@ -234,10 +230,10 @@ nav a:hover, nav a[aria-current="page"] {
   max-width: 72%;
   padding: .36rem;
   overflow: hidden;
-  border: 1px solid #1a252c;
+  border: 1px solid #2d2228;
   border-radius: 2.1rem;
-  background: #19252c;
-  box-shadow: 0 16px 45px #22475f55, inset 0 0 0 1px #75858d;
+  background: #252025;
+  box-shadow: 0 16px 45px #23091880, inset 0 0 0 1px #8d7c85;
 }
 
 .phone picture { display: block; }
@@ -397,9 +393,9 @@ footer p { margin-top: .65rem; }
     --contact: #3a2b23;
   }
 
-  .preview-stage { border-color: #3f6372; background: linear-gradient(145deg, #668d9d, #304d5e); }
-  .preview-stage::before {
-    border-color: #c3e8f28a;
-    box-shadow: 0 0 0 2.7rem #c3e8f21a, 0 0 0 5.4rem #c3e8f214;
+  .preview-stage {
+    --curtain-glow: #ff9d7838;
+    --curtain-shadow: #230b22ca;
+    border-color: #632c42;
   }
 }
