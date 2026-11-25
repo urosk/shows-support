@@ -137,13 +137,9 @@ nav a:hover, nav a[aria-current="page"] {
 .button:hover { background: var(--accent-hover); color: var(--button-text); }
 .hero .button { margin-top: 1.75rem; }
 
-.preview {
+.preview-stage {
   position: relative;
-  display: grid;
   height: clamp(23rem, 44vw, 31rem);
-  justify-items: center;
-  align-items: start;
-  padding-top: clamp(1.65rem, 4.1vw, 3.1rem);
   overflow: hidden;
   isolation: isolate;
   border: 1px solid #a3ccdd;
@@ -151,7 +147,7 @@ nav a:hover, nav a[aria-current="page"] {
   background: linear-gradient(145deg, #e1f3f8, #a0cfe5);
 }
 
-.preview::before {
+.preview-stage::before {
   position: absolute;
   z-index: -1;
   inset: 18% auto auto -16%;
@@ -161,6 +157,76 @@ nav a:hover, nav a[aria-current="page"] {
   border-radius: 50%;
   box-shadow: 0 0 0 2.7rem #effaff3b, 0 0 0 5.4rem #effaff2e;
   content: "";
+}
+
+.preview-track {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 100%);
+  grid-template-rows: minmax(0, 1fr);
+  transition: transform 500ms cubic-bezier(.22, .68, .28, 1);
+}
+
+.preview.show-macos .preview-track { transform: translateX(-100%); }
+
+.preview-slide {
+  display: grid;
+  justify-items: center;
+}
+
+.preview-ios {
+  align-items: start;
+  padding-top: clamp(1.65rem, 4.1vw, 3.1rem);
+}
+
+.preview-macos { position: relative; }
+
+.preview-macos picture {
+  position: absolute;
+  inset: .5rem;
+}
+
+.preview-macos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview-switch:not([hidden]) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: max-content;
+  margin: .75rem auto 0;
+  padding: .2rem;
+  gap: .15rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--contact);
+}
+
+.preview-switch button {
+  min-width: 5.25rem;
+  min-height: 2.4rem;
+  padding: .3rem .8rem;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--muted);
+  font: 650 .875rem/1.2 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.preview-switch button:hover { color: var(--ink); }
+
+.preview-switch button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 3px #17100b24;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-track { transition: none; }
 }
 
 .phone {
@@ -173,6 +239,8 @@ nav a:hover, nav a[aria-current="page"] {
   background: #19252c;
   box-shadow: 0 16px 45px #22475f55, inset 0 0 0 1px #75858d;
 }
+
+.phone picture { display: block; }
 
 .phone img {
   display: block;
@@ -310,7 +378,7 @@ footer p { margin-top: .65rem; }
   .site-header { min-height: 4.5rem; }
   .hero, .highlights, .steps { grid-template-columns: 1fr; }
   .hero h1 { max-width: 11em; font-size: clamp(2.85rem, 11.7vw, 4.2rem); }
-  .preview { height: clamp(23.5rem, 108vw, 30rem); }
+  .preview-stage { height: clamp(23.5rem, 108vw, 30rem); }
   .phone { width: clamp(12rem, 55vw, 14.75rem); }
   .steps { gap: 1.3rem; }
   .contact { align-items: flex-start; flex-direction: column; }
@@ -329,8 +397,8 @@ footer p { margin-top: .65rem; }
     --contact: #3a2b23;
   }
 
-  .preview { border-color: #3f6372; background: linear-gradient(145deg, #668d9d, #304d5e); }
-  .preview::before {
+  .preview-stage { border-color: #3f6372; background: linear-gradient(145deg, #668d9d, #304d5e); }
+  .preview-stage::before {
     border-color: #c3e8f28a;
     box-shadow: 0 0 0 2.7rem #c3e8f21a, 0 0 0 5.4rem #c3e8f214;
   }

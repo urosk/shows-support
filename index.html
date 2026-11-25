@@ -37,11 +37,30 @@
           <p class="lede">Keep a TV watchlist with upcoming episodes, season premieres, and series that have wrapped up.</p>
           <a class="button" href="#getting-started">Getting started <span aria-hidden="true">↓</span></a>
         </div>
-        <figure class="preview">
-          <div class="phone">
-            <img src="og.png" width="662" height="1440" alt="Shows on iPhone, with a watchlist of airing series, upcoming dates, and ended shows.">
+        <div class="preview">
+          <div class="preview-stage">
+            <div class="preview-track">
+              <div class="preview-slide preview-ios" id="preview-ios">
+                <div class="phone">
+                  <picture>
+                    <source media="(prefers-color-scheme: dark)" srcset="ios-dark.png">
+                    <img src="og.png" width="662" height="1440" alt="Shows on iPhone, with airing series and upcoming premiere dates.">
+                  </picture>
+                </div>
+              </div>
+              <div class="preview-slide preview-macos" id="preview-macos" aria-hidden="true">
+                <picture>
+                  <source media="(prefers-color-scheme: dark)" srcset="macos-dark.png">
+                  <img src="metal.png" width="835" height="1280" alt="Shows on Mac, with upcoming dates and series status badges in the watchlist window.">
+                </picture>
+              </div>
+            </div>
           </div>
-        </figure>
+          <div class="preview-switch" role="group" aria-label="Screenshot platform" hidden>
+            <button type="button" aria-pressed="true" aria-controls="preview-ios">iOS</button>
+            <button type="button" aria-pressed="false" aria-controls="preview-macos">macOS</button>
+          </div>
+        </div>
       </section>
 
       <section class="highlights" aria-label="Features">
@@ -124,5 +143,53 @@
       </div>
       <p>Schedule data from <a href="https://www.tvmaze.com/api">TVmaze</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), end statuses from <a href="https://trakt.tv/">Trakt</a>, and IMDb ratings via <a href="https://www.omdbapi.com/">OMDb</a>.</p>
     </footer>
+
+    <script>
+      const preview = document.querySelector(".preview");
+      const platformSwitch = preview.querySelector(".preview-switch");
+      const segments = Array.from(platformSwitch.querySelectorAll("button"));
+      const slides = Array.from(preview.querySelectorAll(".preview-slide"));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let activeSlide = 0;
+      let userSelected = false;
+      let interval;
+
+      function showSlide(index) {
+        activeSlide = index;
+        preview.classList.toggle("show-macos", index === 1);
+        segments.forEach((segment, position) => {
+          segment.setAttribute("aria-pressed", String(position === index));
+          slides[position].setAttribute("aria-hidden", String(position !== index));
+        });
+      }
+
+      function updateAutoplay() {
+        clearInterval(interval);
+        if (!userSelected && !reducedMotion.matches && !document.hidden) {
+          interval = setInterval(() => showSlide(1 - activeSlide), 5000);
+        }
+      }
+
+      segments.forEach((segment, index) => {
+        segment.addEventListener("click", () => {
+          userSelected = true;
+          updateAutoplay();
+          showSlide(index);
+        });
+      });
+
+      platformSwitch.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        const segment = segments[event.key === "ArrowLeft" ? 0 : 1];
+        segment.focus();
+        segment.click();
+      });
+
+      document.addEventListener("visibilitychange", updateAutoplay);
+      reducedMotion.addEventListener("change", updateAutoplay);
+      platformSwitch.hidden = false;
+      updateAutoplay();
+    </script>
   </body>
 </html>
