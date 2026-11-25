@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Track TV premieres and upcoming episodes with Shows for Mac, iPhone, and iPad. Find setup help and contact support.">
+    <meta name="theme-color" content="#f8f4ec" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#211c18" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shows">
+    <meta property="og:description" content="Know when your shows return. A TV watchlist for Mac, iPhone, and iPad.">
+    <meta property="og:url" content="https://urosk.github.io/shows-support/">
+    <meta property="og:image" content="https://urosk.github.io/shows-support/app-icon.png">
+    <meta property="og:image:alt" content="Shows app icon, an orange couch on a blue background">
+    <title>Shows Support</title>
+    <link rel="canonical" href="https://urosk.github.io/shows-support/">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Shows support home">
+        <img src="app-icon.png" width="40" height="40" alt="">
+        Shows
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="./" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">For Mac, iPhone, and iPad</p>
+          <h1 id="page-title">Know when your shows return.</h1>
+          <p class="lede">Keep a TV watchlist with upcoming episodes, season premieres, and series that have wrapped up.</p>
+          <a class="button" href="#getting-started">Getting started <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="preview">
+          <div class="phone">
+            <img src="og.png" width="662" height="1440" alt="Shows on iPhone, with a watchlist of airing series, upcoming dates, and ended shows.">
+          </div>
+        </figure>
+      </section>
+
+      <section class="highlights" aria-label="Features">
+        <article>
+          <span class="tag tag-airing">Airing</span>
+          <h2>Follow the schedule</h2>
+          <p>See the next episode or season premiere, including announced release windows.</p>
+        </article>
+        <article>
+          <span class="tag tag-concluded">Concluded</span>
+          <h2>See how a series ended</h2>
+          <p>Shows uses Trakt to distinguish concluded series from cancellations when that information is available.</p>
+        </article>
+        <article>
+          <span class="tag tag-cloud">Optional iCloud</span>
+          <h2>Share a watchlist</h2>
+          <p>Keep separate libraries, sync them across your devices, or invite someone to a shared list.</p>
+        </article>
+      </section>
+
+      <section class="section" id="getting-started" aria-labelledby="start-title">
+        <h2 id="start-title">Getting started</h2>
+        <ol class="steps">
+          <li>
+            <h3>Add a show</h3>
+            <p>Tap <strong>+</strong> or press <kbd>⌘N</kbd> on Mac. Search by title, choose a result, and select <strong>Add</strong>.</p>
+          </li>
+          <li>
+            <h3>Check the next release</h3>
+            <p>Read the status badge beside the show. Select a row to see its IMDb rating and streaming service when available.</p>
+          </li>
+          <li>
+            <h3>Sync or invite</h3>
+            <p>Open <strong>Shows → Settings</strong> on Mac or tap the gear on iPhone or iPad. Turn on iCloud sync for this device. Select a personal library and choose <strong>Invite</strong> to share it privately.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section questions" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What do the release badges mean?</summary>
+            <p><strong>Airing</strong> means a season is underway with episodes still scheduled, or a release happens today. A date or release window appears when one is known. <strong>Date TBA</strong> means there is no known upcoming date.</p>
+          </details>
+          <details>
+            <summary>Why does a series say Ended?</summary>
+            <p>TVmaze lists the series as ended. Shows switches the badge to <strong>Concluded</strong> or <strong>Cancelled</strong> when Trakt confirms how it ended.</p>
+          </details>
+          <details>
+            <summary>Why is a show unavailable in my country?</summary>
+            <p>Release dates follow the original broadcast or streaming schedule. Check the streaming service for availability in your country.</p>
+          </details>
+          <details>
+            <summary>How do I remove a show?</summary>
+            <p>On Mac, select the show and press Delete, or use its right-click menu. On iPhone or iPad, swipe left on the row and tap <strong>Delete</strong>.</p>
+          </details>
+          <details>
+            <summary>Does Shows work without iCloud or internet access?</summary>
+            <p>You can use Shows with iCloud off. Saved libraries remain available offline. Searching for new shows, refreshing release data, and iCloud sync require an internet connection.</p>
+          </details>
+          <details>
+            <summary>What if my library isn’t syncing?</summary>
+            <p>Check that you’re signed into iCloud and that sync is on in Shows Settings on each device. Check <strong>Last synced</strong>, then select <strong>Sync Now</strong>. To access another person’s library, accept their invitation on a device with Shows installed.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Contact support</h2>
+          <p>Include your device, OS version, and a short description of what happened.</p>
+        </div>
+        <a class="button" href="mailto:info@bluepeakmobile.com?subject=Shows%20Support">Email support</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-row">
+        <span>© 2026 Uroš Katić</span>
+        <span>macOS 14+, iOS 17+, iPadOS 17+</span>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <p>Schedule data from <a href="https://www.tvmaze.com/api">TVmaze</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), end statuses from <a href="https://trakt.tv/">Trakt</a>, and IMDb ratings via <a href="https://www.omdbapi.com/">OMDb</a>.</p>
+    </footer>
+  </body>
+</html>
