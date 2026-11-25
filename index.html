@@ -15,7 +15,7 @@
     <title>Shows Support</title>
     <link rel="canonical" href="https://urosk.github.io/shows-support/">
     <link rel="icon" type="image/png" href="app-icon.png">
-    <link rel="stylesheet" href="styles.css?v=animated-curtain">
+    <link rel="stylesheet" href="styles.css?v=status-badges">
   </head>
   <body>
     <header class="site-header">
@@ -65,19 +65,27 @@
 
       <section class="highlights" aria-label="Features">
         <article>
-          <span class="tag tag-airing">Airing</span>
+          <div class="tags">
+            <span class="tag tag-airing">Airing</span>
+            <span class="tag tag-upcoming">Upcoming</span>
+          </div>
           <h2>Follow the schedule</h2>
-          <p>See the next episode or season premiere, including announced release windows.</p>
+          <p>See when the next episode or season is due, even when only an approximate date is known.</p>
         </article>
         <article>
-          <span class="tag tag-concluded">Concluded</span>
+          <div class="tags">
+            <span class="tag tag-concluded">Concluded</span>
+            <span class="tag tag-cancelled">Cancelled</span>
+          </div>
           <h2>See how a series ended</h2>
-          <p>Shows uses Trakt to distinguish concluded series from cancellations when that information is available.</p>
+          <p>Find out whether a series wrapped up or was cancelled.</p>
         </article>
         <article>
-          <span class="tag tag-cloud">Optional iCloud</span>
+          <div class="tags">
+            <span class="tag tag-cloud">Optional iCloud</span>
+          </div>
           <h2>Share a watchlist</h2>
-          <p>Keep separate libraries, sync them across your devices, or invite someone to a shared list.</p>
+          <p>Keep separate watchlists, sync them across your devices, or invite someone to a shared watchlist.</p>
         </article>
       </section>
 
@@ -90,11 +98,11 @@
           </li>
           <li>
             <h3>Check the next release</h3>
-            <p>Read the status badge beside the show. Select a row to see its IMDb rating and streaming service when available.</p>
+            <p>Read the status badge beside the show. Select a show to see its IMDb rating and streaming service when available.</p>
           </li>
           <li>
             <h3>Sync or invite</h3>
-            <p>Open <strong>Shows → Settings</strong> on Mac or tap the gear on iPhone or iPad. Turn on iCloud sync for this device. Select a personal library and choose <strong>Invite</strong> to share it privately.</p>
+            <p>Open <strong>Shows → Settings</strong> on Mac or tap the gear on iPhone or iPad. Turn on iCloud sync for this device. Select a personal watchlist and choose <strong>Invite</strong> to share it privately.</p>
           </li>
         </ol>
       </section>
@@ -104,7 +112,7 @@
         <div class="faq">
           <details>
             <summary>What do the status badges mean?</summary>
-            <p><strong>Airing</strong> means a season is underway with episodes still scheduled, or a release happens today. A date or release window appears when one is known. <strong>Date TBA</strong> means there is no known upcoming date.</p>
+            <p><strong>Airing</strong> means a season is underway with episodes still scheduled, or a release happens today. For upcoming releases, Shows displays a date or an estimate when available. <strong>Date TBA</strong> means there is no known upcoming date.</p>
             <p><strong>Ended</strong> means the series is over and how it ended is unconfirmed. <strong>Concluded</strong> means the series wrapped up. <strong>Cancelled</strong> means the series was cancelled or its story was cut short.</p>
           </details>
           <details>
@@ -117,11 +125,52 @@
           </details>
           <details>
             <summary>Does Shows work without iCloud or internet access?</summary>
-            <p>You can use Shows with iCloud off. Saved libraries remain available offline. Searching for new shows, refreshing release data, and iCloud sync require an internet connection.</p>
+            <p>You can use Shows with iCloud off. Saved watchlists remain available offline. Searching for new shows, checking for new release dates, and iCloud sync require an internet connection.</p>
           </details>
           <details>
-            <summary>What if my library isn’t syncing?</summary>
-            <p>Check that you’re signed into iCloud and that sync is on in Shows Settings on each device. Check <strong>Last synced</strong>, then select <strong>Sync Now</strong>. To access another person’s library, accept their invitation on a device with Shows installed.</p>
+            <summary>What if my watchlist isn’t syncing?</summary>
+            <p>Check that you’re signed into iCloud and that sync is on in Shows Settings on each device. Check <strong>Last synced</strong>, then select <strong>Sync Now</strong>. To access another person’s watchlist, accept their invitation on a device with Shows installed.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section questions" id="family-sharing" aria-labelledby="family-sharing-title">
+        <h2 id="family-sharing-title">Family Sharing FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Can my family share one App Store purchase?</summary>
+            <p>Look for <strong>Family Sharing</strong> under <strong>Supports</strong> on the Shows App Store page. If it’s listed, one purchase can be shared with your Apple Family Sharing group. Set up Family Sharing, have the organizer turn on Purchase Sharing, and make sure both the buyer and the person downloading have opted in. <a href="https://support.apple.com/en-us/108774">Apple’s Purchase Sharing setup guide</a></p>
+          </details>
+          <details>
+            <summary>Does buying Shows on iPhone or iPad also get me the Mac app?</summary>
+            <p>One purchase covers both versions when they’re offered as a universal purchase. To check before buying again, sign in to the App Store on your other device with the Apple Account you used to buy Shows. Look for Shows in your purchases and use the download button if it appears.</p>
+            <p>Shows requires macOS 14 or later, iOS 17 or later, or iPadOS 17 or later. Check the App Store listing for compatibility with your device.</p>
+          </details>
+          <details>
+            <summary>Where do I download a purchase my family member shared?</summary>
+            <p>Open your account in the App Store and select the family member who bought Shows. Find Shows in their purchases and choose the download button. Use your own Apple Account to access your family’s shared purchases. <a href="https://support.apple.com/en-us/102417">Apple’s download steps for iPhone, iPad, and Mac</a></p>
+          </details>
+          <details>
+            <summary>What if I can’t find Shows in my purchases?</summary>
+            <p>For your own purchase, check that you’re signed in to the App Store with the Apple Account you used to buy Shows. For a family purchase, check that you’ve both joined the same Family Sharing group, use the Apple Accounts configured for Purchase Sharing, and that the buyer hasn’t hidden the app. <a href="https://support.apple.com/en-us/108911">Apple’s shared-purchase troubleshooting guide</a></p>
+            <p>If you’re looking for <strong>Restore Purchases</strong>, that option is for in-app purchases. To reinstall Shows, download it from your App Store purchases or the buyer’s shared purchases.</p>
+          </details>
+          <details>
+            <summary>Can I invite friends to a watchlist, too?</summary>
+            <p>Yes. Shows sends private iCloud invitations to the people you choose, including friends outside your Apple Family Sharing group. Each person needs Shows installed and their own Apple Account signed in to iCloud.</p>
+          </details>
+          <details>
+            <summary>How do I send or accept an invitation?</summary>
+            <p>In Shows, open <strong>Shows → Settings</strong> on Mac or tap the gear on iPhone or iPad. Turn on iCloud sync, choose a watchlist you own, and select <strong>Invite</strong>. If Invite is unavailable, select <strong>Sync Now</strong> and wait for the watchlist to finish syncing.</p>
+            <p>Open the invitation on a device with Shows installed while signed in to iCloud with the Apple Account that was invited. If the list still doesn’t appear, ask the owner to check the invitation status in Shows Settings and confirm they invited the right account.</p>
+          </details>
+          <details>
+            <summary>Who can change a shared watchlist?</summary>
+            <p>The owner and anyone with editing access can add or remove shows. If you can open the list but can’t edit it, ask the owner to check your sharing permissions.</p>
+          </details>
+          <details>
+            <summary>Can I keep my own watchlist when I join a shared one?</summary>
+            <p>Yes. Keep a personal watchlist for your own shows and use the <strong>Watchlist</strong> picker in Shows Settings to switch between lists. Inviting someone gives them access only to the watchlist you choose to share.</p>
           </details>
         </div>
       </section>
@@ -141,7 +190,7 @@
         <span>macOS 14+, iOS 17+, iPadOS 17+</span>
         <a href="privacy.html">Privacy Policy</a>
       </div>
-      <p>Schedule data from <a href="https://www.tvmaze.com/api">TVmaze</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), end statuses from <a href="https://trakt.tv/">Trakt</a>, and IMDb ratings via <a href="https://www.omdbapi.com/">OMDb</a>.</p>
+      <p>TV schedules by <a href="https://www.tvmaze.com/">TVmaze</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>).</p>
     </footer>
 
     <script>
